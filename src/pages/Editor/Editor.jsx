@@ -1,8 +1,17 @@
-import { memo } from 'react'
+import { memo, lazy, Suspense } from 'react'
+const Toolbar = lazy(() => import('../../components/Toolbar/Toolbar'))
+const EditorArea = lazy(() => import('../../components/EditorArea/EditorArea'))
 
 const Editor = () => {
   return (
-    <div>Editor</div>
+    <div className='w-screen min-h-screen flex flex-col'>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Toolbar />
+      </Suspense>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <EditorArea />
+      </Suspense>
+    </div>
   )
 }
 

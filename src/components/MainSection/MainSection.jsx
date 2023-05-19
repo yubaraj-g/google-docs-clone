@@ -1,47 +1,55 @@
-import React from 'react'
+import { memo } from 'react'
+import { Link } from 'react-router-dom'
 
 const MainSection = () => {
     const templates = [
         {
             name: "Blank",
             sub: "",
-            link: "https://ssl.gstatic.com/docs/templates/thumbnails/docs-blank-googlecolors.png"
+            link: "https://ssl.gstatic.com/docs/templates/thumbnails/docs-blank-googlecolors.png",
+            path: '/new-document'
         },
         {
             name: "Resume",
             sub: "Serif",
-            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1wyFqxsRmKm9q--7j4WRmBMn694YdhV6hmNrfh4rVm2E_400.png"
+            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1wyFqxsRmKm9q--7j4WRmBMn694YdhV6hmNrfh4rVm2E_400.png",
+            path: ''
         },
         {
             name: "Resume",
             sub: "Coral",
-            link: "https://ssl.gstatic.com/docs/templates/thumbnails/10bJALGfGJG8BrzBSmG6EznIq6-84l1TZkQ-HC8jO368_400.png"
+            link: "https://ssl.gstatic.com/docs/templates/thumbnails/10bJALGfGJG8BrzBSmG6EznIq6-84l1TZkQ-HC8jO368_400.png",
+            path: ''
         },
         {
             name: "Letter",
             sub: "Spearmint",
-            link: "https://ssl.gstatic.com/docs/templates/thumbnails/10e8_E36oj6_LuCRzckBFX_9oqbCHntmYB-jxB5U9gsw_400_2.png"
+            link: "https://ssl.gstatic.com/docs/templates/thumbnails/10e8_E36oj6_LuCRzckBFX_9oqbCHntmYB-jxB5U9gsw_400_2.png",
+            path: ''
         },
         {
             name: "Project Proposal",
             sub: "Tropic",
-            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1XykI9TfWo4IoUqGLjQ-D8NIU4jZ1Ml9OI8-Euj5FrA0_400_3.png"
+            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1XykI9TfWo4IoUqGLjQ-D8NIU4jZ1Ml9OI8-Euj5FrA0_400_3.png",
+            path: ''
         },
         {
             name: "Brochure",
             sub: "Geometric",
-            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1TojfPV3jurwEV2RpmVqnCCCR4z9g2eQBZ40XTHPBqk8_400_3.png"
+            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1TojfPV3jurwEV2RpmVqnCCCR4z9g2eQBZ40XTHPBqk8_400_3.png",
+            path: ''
         },
         {
             name: "Report",
             sub: "Luxe",
-            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1OLxGsoZ-q6o9MiMbWpY7FngEKzF94SS6fZXAwo-vorM_400_2.png"
+            link: "https://ssl.gstatic.com/docs/templates/thumbnails/1OLxGsoZ-q6o9MiMbWpY7FngEKzF94SS6fZXAwo-vorM_400_2.png",
+            path: ''
         },
     ]
 
     return (
         <>
-            <div className='pl-48 pr-60 py-4 bg-gray-100 min-h-[10rem] w-full flex flex-col justify-start gap-4'>
+            <div className='pl-48 pr-60 py-4 bg-gray-100 min-h-[10rem] w-full flex flex-col justify-start gap-3'>
                 <div className='w-full flex px-2 justify-between'>
                     <h4 className='text-[1.05rem]'>Start a new document</h4>
                     <div className='flex items-center gap-2'>
@@ -56,7 +64,7 @@ const MainSection = () => {
                 <div className='flex gap-4'>
                     {
                         templates.map((temp, index) => (
-                            <div className='flex flex-col gap-2' key={index}>
+                            <Link to={temp.path} className='flex flex-col gap-2' key={index}>
                                 <button className='border border-gray-300 w-36 h-fit bg-white rounded hover:border-blue-400'>
                                     <img src={temp.link} alt="" className='w-fit object-cover rounded' />
                                 </button>
@@ -64,7 +72,7 @@ const MainSection = () => {
                                     <h6 className='font-medium text-sm'>{temp.name}</h6>
                                     <h6 className='text-sm font-light'>{temp.sub}</h6>
                                 </div>
-                            </div>
+                            </Link>
                         ))
                     }
 
@@ -74,4 +82,4 @@ const MainSection = () => {
     )
 }
 
-export default MainSection
+export default memo(MainSection)
