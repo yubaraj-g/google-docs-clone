@@ -2,6 +2,7 @@
 - React.js
 - Redux.js /Tookit
 - Tailwindcss
+- Vite
 
 
 -- <b>To install necessary packages</b><br>
