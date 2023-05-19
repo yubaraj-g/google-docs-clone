@@ -1,8 +1,8 @@
 -- <h4>List of Libraries and Packages used</h4>
-- React.js
-- Redux.js /Tookit
-- Tailwindcss
-- Vite
+- <h3>React.js</h3>
+- <h3>Redux.js /Tookit</h3>
+- <h3>Tailwindcss</h3>
+- <h3>Vite</h3>
 
 
 -- <h4>To install necessary packages</h4>
