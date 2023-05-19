@@ -1,16 +1,15 @@
--- <b>List of Libraries and Packages used</b>
+-- <h4>List of Libraries and Packages used</h4>
 - React.js
 - Redux.js /Tookit
 - Tailwindcss
 - Vite
 
 
--- <b>To install necessary packages</b><br>
-```npm i```
+-- <h4>To install necessary packages</h4><br>
+- <h2> npm install </h2> <br>
 
--- <b>For development build</b><br>
-```npm run dev```
+-- <h4>For development run</h4><br>
+- <h2> npm run dev </h2> <br>
 
-
--- <b>For production build</b><br>
-<h1> ```npm run build``` </h1>
+-- <h4>For production build</h4><br>
+- <h2> npm run build </h2> <br>
