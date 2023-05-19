@@ -6,11 +6,11 @@
 
 
 -- <b>To install necessary packages</b><br>
-```npm i`
+```npm i```
 
 -- <b>For development build</b><br>
-```npm run dev`
+```npm run dev```
 
 
 -- <b>For production build</b><br>
-```npm run build`
+```npm run build```
