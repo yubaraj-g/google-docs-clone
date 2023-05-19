@@ -1,6 +1,15 @@
--- For development build
-```npm run dev```
+-- <b>List of Libraries and Packages used</b>
+- React.js
+- Redux.js /Tookit
+- Tailwindcss
 
 
--- For production build
-```npm run build```
+-- <b>To install necessary packages</b><br>
+```npm i`
+
+-- <b>For development build</b><br>
+```npm run dev`
+
+
+-- <b>For production build</b><br>
+```npm run build`
