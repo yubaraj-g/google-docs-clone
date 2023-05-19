@@ -1,6 +1,6 @@
 -- For development build
-#npm run dev
+```npm run dev```
 
 
 -- For production build
-#npm run build
+```npm run build```
