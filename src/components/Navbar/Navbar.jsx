@@ -1,5 +1,5 @@
 import { memo, useRef } from 'react'
-import { Hamburger, Search } from '../../assets/'
+import { Hamburger, Search } from '../../components/jsx-icons'
 import { useDispatch } from 'react-redux'
 import { showSidebar } from '../../redux/reducers/sidebarSlice'
 import { Link } from 'react-router-dom'
@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
         <div className='w-10 h-10 flex my-1 hover:bg-gray-200 rounded-full justify-center items-center p-1 cursor-pointer'>
           <div className='bg-gray-800 rounded-full w-8 h-8 flex'>
-            <img src=".../../src/assets/react.svg" alt="" className='w-3/4 m-auto' />
+            <img src="/assets/react.svg" alt="profile" className='w-3/4 m-auto' />
           </div>
         </div>
       </div>
