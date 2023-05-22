@@ -5,12 +5,11 @@ import { expandToolbar, toolbarExpanded } from '../../redux/reducers/toolbarSlic
 import Tooltip from '../Tooltip/Tooltip'
 
 const SecondaryToolbar = () => {
-    console.log('secondary toolbar')
     const dispatch = useDispatch()
     // redux state of toolbar expanded or not
     const toolbarExpand = useSelector(toolbarExpanded)
     const [fontsize, setFontsize] = useState(11)
-    // toolbar states for tooltip
+    // states for tooltip
     const [tooltipUndo, setTooltipUndo] = useState(false)
     const [tooltipRedo, setTooltipRedo] = useState(false)
     const [tooltipPrint, setTooltipPrint] = useState(false)

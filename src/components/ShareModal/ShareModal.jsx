@@ -1,4 +1,4 @@
-import { memo, useState } from 'react'
+import { memo, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { documentNameRedux, getDocumentName } from '../../redux/reducers/documentNameSlice'
 import { ArrowDown, InsertLink, Lock } from '../jsx-icons'
@@ -20,6 +20,10 @@ const ShareModal = () => {
         dispatch(changeModalState(false))
     }
 
+    // storing parent div of input element which adds people and groups
+    const parentDiv = useRef()
+
+    
     if (documentName === 'Untitled document' && skipped === false) {
         return <>
             <div className='flex flex-col p-6 justify-between w-[24%] h-[31%] bg-white rounded-md relative' onClick={(e) => {
@@ -75,15 +79,28 @@ const ShareModal = () => {
                 }}>
 
                     <h2 className='text-[1.35rem] mx-6 cursor-text'>Share "{name}"</h2>
-                    <div className='px-6 w-full'>
+                    <div className='px-6 w-full' id="parent_div_add_people_input" ref={parentDiv}>
                         <input
                             type="text"
-                            className='px-5 py-3 rounded border border-gray-400 hover:border-black hover:border-b-2 w-full placeholder:text-gray-600 placeholder:text-sm hover:-mb-[1px]'
+                            className='px-5 py-3 rounded border border-gray-400 hover:border-gray-800 hover:border-b-2 w-full placeholder:text-gray-600 placeholder:text-sm'
                             placeholder='Add people and groups'
+                            id="add_people_input"
+                            onMouseOver={(e) => {
+                                if (parentDiv?.current.classList.contains('mb-[-1px]') === false) {
+                                    parentDiv?.current.classList.add('mb-[-1px]')
+                                }
+                                e.stopPropagation()
+                            }}
+                            onMouseOut={(e) => {
+                                if (parentDiv?.current.classList.contains('mb-[-1px]')) {
+                                    parentDiv?.current.classList.remove('mb-[-1px]')
+                                }
+                                e.stopPropagation()
+                            }}
                         />
                     </div>
 
-                    <h3 className='mx-6 -mb-3 font-medium mt-[1px] cursor-text'>People with access</h3>
+                    <h3 className='mx-6 -mb-3 font-medium cursor-text'>People with access</h3>
                     <div className='flex justify-between w-full hover:bg-gray-100 px-6 items-center py-2 mb-1'>
                         <div className='flex gap-2 items-center'>
                             <img src="/assets/react.svg" alt="" className='bg-slate-800 rounded-full px-1.5 w-8 h-8' />

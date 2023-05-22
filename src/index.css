@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
-
 
 :root {
   color-scheme: light dark;
@@ -15,7 +14,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,7 +45,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -65,12 +66,10 @@ body {
   line-height: 1.5;
   font-size: 14px;
   letter-spacing: 0.05em;
-  color: rgba(0, 0, 0, 0.9)
+  color: rgba(0, 0, 0, 0.9);
 }
 #primary_toolbar_div input {
   color: rgba(0, 0, 0, 0.7);
 }
 
-
-
-  @tailwind utilities;
+@tailwind utilities;
