@@ -4,11 +4,17 @@ import Sidebar from '../../components/SidebarLeft/SidebarLeft'
 
 const Home = () => {
   return (
-    <div className='w-full flex items-center min-h-screen flex-col bg-white'>
-      <Navbar />
-      <Sidebar />
-      <MainSection />
-    </div>
+    <>
+      <div className='w-full flex items-center min-h-screen flex-col bg-white'>
+
+        <Navbar />
+
+        <Sidebar />
+
+        <MainSection />
+        
+      </div>
+    </>
   )
 }
 

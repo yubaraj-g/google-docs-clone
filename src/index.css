@@ -1,13 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
+:root {
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.77);
+  color: rgba(0, 0, 0, 0.85);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,6 +19,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  /* font-weight: 400; */
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #dadce0;
+  border-radius: 15px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  overflow: hidden;
 }
 
 #root {
@@ -29,6 +59,17 @@
   position: relative;
 }
 
+#primary_toolbar_div {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.9)
+}
+#primary_toolbar_div input {
+  color: rgba(0, 0, 0, 0.7);
+}
 
 
 

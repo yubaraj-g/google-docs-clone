@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowDown } from '../jsx-icons'
 
 const MainSection = () => {
     const templates = [
@@ -53,7 +54,13 @@ const MainSection = () => {
                 <div className='w-full flex px-2 justify-between'>
                     <h4 className='text-[1.05rem]'>Start a new document</h4>
                     <div className='flex items-center gap-2'>
-                        <button className='text-[0.92rem] font-medium border-r px-4 hover:bg-gray-300 py-1 rounded'>Template Gallery</button>
+                        <button className='text-[0.92rem] flex items-center gap-2 font-medium border-r px-4 hover:bg-gray-300 py-1 rounded'>
+                            Template Gallery
+                            <div className='flex flex-col justify-center'>
+                                <div className='rotate-180'><ArrowDown /></div>
+                                <div className='-mt-2.5'><ArrowDown /></div>
+                            </div>
+                            </button>
                         <div className='flex flex-col gap-0.5 rounded-full hover:bg-gray-300 cursor-pointer w-3 justify-center items-center px-4 py-2'>
                             <div className='w-1 h-1 rounded-full bg-gray-500'></div>
                             <div className='w-1 h-1 rounded-full bg-gray-500'></div>

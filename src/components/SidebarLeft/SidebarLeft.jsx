@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { showSidebar, sidebarState } from '../../redux/reducers/sidebarSlice'
-// import s from '../../assets/google.png'
 
 const SidebarLeft = () => {
   const dispatch = useDispatch()
