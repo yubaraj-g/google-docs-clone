@@ -12,7 +12,7 @@ import Photo from "./Photo"
 import BarsLeft from "./BarsLeft";
 import BarsArrow from "./BarsArrow";
 import Plus from "./Plus";
-import CrossXmark from "./crossXmark";
+import CrossXmark from "./CrossXmark";
 
 
 export {
