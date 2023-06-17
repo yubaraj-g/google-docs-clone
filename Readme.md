@@ -1,6 +1,6 @@
 -- <h4>List of Libraries and Packages used</h4>
 - <h3>React.js</h3>
-- <h3>Redux.js /Tookit</h3>
+- <h3>Redux.js /Toolkit</h3>
 - <h3>Tailwindcss</h3>
 - <h3>Vite</h3>
 
